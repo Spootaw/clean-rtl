@@ -1,0 +1,38 @@
+{
+  "manifest_version": 3,
+  "name": "Clear RTL",
+  "version": "1.0.0",
+  "description": "Smart RTL and Persian text formatting helper for dynamic web pages.",
+  "permissions": [
+    "storage",
+    "activeTab",
+    "tabs"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_icon": {
+      "16": "icons/icon-active-16.png",
+      "48": "icons/icon-active-48.png",
+      "128": "icons/icon-active-128.png"
+    },
+    "default_popup": "popup.html"
+  },
+  "icons": {
+    "16": "icons/icon-active-16.png",
+    "48": "icons/icon-active-48.png",
+    "128": "icons/icon-active-128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ]
+}

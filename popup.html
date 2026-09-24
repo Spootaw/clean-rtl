@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>Clear RTL</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <h1 class="title">Clear RTL</h1>
+    <p class="subtitle">اصلاح جهت متن فارسی</p>
+
+    <div class="row">
+      <span class="label">فعال در این سایت</span>
+      <label class="switch">
+        <input type="checkbox" id="toggle">
+        <span class="slider"></span>
+      </label>
+    </div>
+
+    <div class="status">
+      <span class="label">وضعیت:</span>
+      <span id="status-text">در حال بارگذاری…</span>
+    </div>
+
+    <div class="status">
+      <span class="label">تعداد اصلاح‌شده:</span>
+      <span id="count">0</span>
+    </div>
+
+    <p class="hint">
+      فقط بلوک‌های متنی فارسی اصلاح می‌شوند و کل صفحه دست‌نخورده می‌ماند.
+    </p>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<title>Clear RTL Test Page</title>
+<style>
+  body { font-family: sans-serif; max-width: 700px; margin: 40px auto; padding: 0 20px; }
+  .box { border: 1px solid #ddd; padding: 16px; margin: 16px 0; border-radius: 8px; }
+  pre { background: #f4f4f4; paddingpx; }
+  pre { background: #f4f4f4; padding text-align: left; }
+</style>
+</head>
+<body>
+  <h1>Clear RTL Test Page</h1>
+  <p>This page mixes Persian and English text. Open the Clear RTL popup to toggle it on/off and watch blocks change.</p>
+
+  <div class="box">
+    <p>این یک پاراگراف کاملاً فارسی است که باید راست‌چین شود.</p>
+  </div>
+
+  <div class="box">
+    <p>This English paragraph should stay left-aligned.</p>
+  </div>
+
+  <div class="box">
+    <p>متن ترکیبی: این جمله فارسی است ولی چند کلمه English در آن هست.</p>
+  </div>
+
+  <div class="box">
+    <p>کد زیر نباید تغییر کند:</p>
+    <pre>
+function greet() {
+  console.log("سلام دنیا");
+}
+    </pre>
+  </div>
+
+  <div class="box">
+    <p>این لینک فارسی است: <a href="https://example.com">سایت نمونه</a></p>
+  </div>
+
+  <div class="box">
+    <p>ایمیل: user@example.com باید دست‌نخورده بماند.</p>
+  </div>
+
+  <div class="box">
+    <label>فیلد قابل ویرایش:</label>
+    <textarea rows="3" style="width:100%">متن فارسی داخل textarea نباید تغییر جهت بدهد.</textarea>
+  </div>
+
+  <div class="box">
+    <h2>عنوان فارسی هدینگ</h2>
+    <p>پاراگراف داخل همین باکس.</p>
+  </div>
+
+  <div id="dynamic" class="box">
+    <p id="dynamic-label">محتوای پویا اینجا اضافه می‌شود:</p>
+  </div>
+  <button onclick="addPersian()">افزودن بلوک فارسی (تست SPA)</button>
+
+  <script>
+    function addPersian() {
+      const box = document.getElementById("dynamic");
+      const p = document.createElement("p");
+      p.textContent = "این بلوک جدید است و باید به‌صورت خودکار راست‌چین شود — تست MutationObserver.";
+      box.appendChild(p);
+    }
+  </script>
+</body>
+</html>
